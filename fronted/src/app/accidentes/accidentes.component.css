@@ -1,0 +1,129 @@
+
+
+  /* Contenedor de la barra de navegación */
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0d0f13;
+    padding: 10px 20px;
+    color: #ffffff;
+  }
+  
+  /* Estilo del logo */
+  .logo img {
+    width: 80px;
+  }
+  
+  /* Enlaces de navegación */
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .navbar-links a:hover {
+    color: #00bfff;
+  }
+  
+  /* Línea separadora entre enlaces */
+  .navbar-links a:not(:last-child)::after {
+    content: "|";
+    margin-left: 10px;
+    color: #ffffff;
+  }
+  
+
+/* Cards */
+  .custom-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    background-color: #ffffff;
+  }
+  
+  .card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+  }
+  
+  .card-description {
+    color: #666666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .card-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .card-image {
+    width: 60px;
+    height: auto;
+  }
+  
+
+  /* Boton perfil*/
+
+  .menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar-button {
+    background-color: #00bfff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .navbar-button:hover {
+    background-color: #009ec3;
+  }
+  
+  .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 70px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .dropdown-menu a {
+    display: flex; /* Usar flexbox para alinear */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f1f1f1;
+  }
+  

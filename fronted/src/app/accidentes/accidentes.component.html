@@ -1,0 +1,114 @@
+<!-- accidentes.component.html -->
+<div class="navbar-container">
+    <div class="logo">
+        <img src="assets/templates/logo.png" alt="Tecsup Logo" />
+    </div>
+    <nav class="navbar-links">
+        <a href="accidentes">Alertas</a>
+        <a href="camara">Camaras</a>
+    </nav>
+    <div class="menu-container">
+        <button class="navbar-button" (click)="toggleMenu()">Perfil</button>
+        <div class="dropdown-menu" *ngIf="menuVisible">
+            <a href="#" (click)="goToConfig()">
+                <img src="assets/templates/configuraciones.png" alt="Configuración" class="icon">
+            </a>
+            <a href="#" (click)="logout()">
+                <img src="assets/templates/salir.png" alt="Configuración" class="icon">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-4">
+    <div>
+        <h2>Hola {{ userName }}.</h2>
+        <p>Revisa lo que tenemos para ti</p>
+    </div>
+
+    <br>
+    <!-- Tarjetas de infracciones -->
+    <h4>Infracciones de seguridad</h4>
+    <div class="row">
+        <!-- Sin casco -->
+        <div class="col-md-3">
+            <div class="card custom-card">
+                <div class="card-body d-flex align-items-center">
+                    <div class="card-text">
+                        <h5 class="card-title">Sin casco</h5>
+                        <p class="card-description">Personas que fueron registradas</p>
+                        <h3 class="card-number">{{ totalCasco }}</h3>
+                    </div>
+                    <img src="assets/templates/casco.png" class="card-image" alt="Casco">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sin chaleco -->
+        <div class="col-md-3">
+            <div class="card custom-card">
+                <div class="card-body d-flex align-items-center">
+                    <div class="card-text">
+                        <h5 class="card-title">Sin chaleco</h5>
+                        <p class="card-description">Personas que fueron registradas</p>
+                        <h3 class="card-number">{{ totalChaleco }}</h3>
+                    </div>
+                    <img src="assets/templates/chaleco.png" class="card-image" alt="Casco">
+                </div>
+            </div>
+        </div>
+        <!-- Sin zapatos -->
+        <div class="col-md-3">
+            <div class="card custom-card">
+                <div class="card-body d-flex align-items-center">
+                    <div class="card-text">
+                        <h5 class="card-title">Sin Zapatos</h5>
+                        <p class="card-description">Personas que fueron registradas</p>
+                        <h3 class="card-number">{{ totalZapatos }}</h3>
+                    </div>
+                    <img src="assets/templates/botas.png" class="card-image" alt="Casco">
+                </div>
+            </div>
+        </div>
+        <!-- Tarjetas guantes -->
+        <div class="col-md-3">
+            <div class="card custom-card">
+                <div class="card-body d-flex align-items-center">
+                    <div class="card-text">
+                        <h5 class="card-title">Sin guantes</h5>
+                        <p class="card-description">Personas que fueron registradas</p>
+                        <h3 class="card-number">{{ totalGuantes }}</h3>
+                    </div>
+                    <img src="assets/templates/guantes.png" class="card-image" alt="Casco">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <!-- Gráficos -->
+    <h4>Estadisticas</h4>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="card custom-card">
+                <h5>Historial de infracciones</h5>
+                <div class="card-body">
+                    <canvas id="historialInfracciones"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card custom-card">
+                <div class="card-body">
+                    <h5>Cantidad de infracciones</h5>
+                    <!-- Otro gráfico aquí -->
+                    <canvas id="cantidadInfracciones"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>

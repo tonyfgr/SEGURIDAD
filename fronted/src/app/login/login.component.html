@@ -1,0 +1,14 @@
+<div class="login-container">
+    <div class="login-card">
+        <img src="assets/templates/logo.png" alt="Tecsup Logo" class="logo-image" />
+        <h2>Inicia sesión</h2>
+        <form (ngSubmit)="onLogin()">
+            <input [(ngModel)]="correo" type="email" placeholder="Correo electrónico*" required name="correo" />
+            <input [(ngModel)]="contrasena" type="password" placeholder="Contraseña*" required name="contrasena" />
+            <button type="submit" class="login-button">Iniciar sesión</button>
+            <div *ngIf="errorMessage" class="error-message">
+                <p>{{ errorMessage }}</p>
+            </div>
+        </form>
+    </div>
+</div>

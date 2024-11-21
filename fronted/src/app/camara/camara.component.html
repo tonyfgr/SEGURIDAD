@@ -1,0 +1,60 @@
+<!-- camara.component.html -->
+<div class="navbar-container">
+    <div class="logo">
+        <img src="assets/templates/logo.png" alt="Tecsup Logo" />
+    </div>
+    <nav class="navbar-links">
+        <a href="accidentes">Alertas</a>
+        <a href="camara">Camaras</a>
+    </nav>
+    <div class="menu-container">
+        <button class="navbar-button" (click)="toggleMenu()">Perfil</button>
+        <div class="dropdown-menu" *ngIf="menuVisible">
+            <a href="#" (click)="goToConfig()">
+                <img src="assets/templates/configuraciones.png" alt="Configuración" class="icon">
+            </a>
+            <a href="#" (click)="logout()">
+                <img src="assets/templates/salir.png" alt="Configuración" class="icon">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-4">
+    <h2>Tiempo real</h2>
+    <p>Revisa todas las cámaras para detectar posibles infracciones en tiempo real</p>
+
+    <div class="row">
+        <div class="col-md-8">
+            <!-- Cámara en tiempo real -->
+            <div class="card">
+                <div class="card custom-card">
+                    <h5>Cámara 1</h5>
+                    <img [src]="videoUrl" width="100%" alt="Detección de EPP en tiempo real" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+
+            <!-- Infracciones detectadas -->
+            <div class="card">
+                <div class="card custom-card">
+                    <h5>Infracciones</h5>
+                    <ul class="list-unstyled">
+                        <li><img src="assets/templates/casco.png" alt="Sin casco" class="icon-sm"> Sin Casco - {{ accidentes.casco }}
+                        </li>
+                        <li><img src="assets/templates/chaleco.png" alt="Sin casco" class="icon-sm"> Sin Chaleco - {{ accidentes.chaleco }}
+                        </li>
+                        <li><img src="assets/templates/botas.png" alt="Sin casco" class="icon-sm"> Sin Zapatos - {{ accidentes.zapatos }}
+                        </li>
+                        <li><img src="assets/templates/guantes.png" alt="Sin casco" class="icon-sm"> Sin Guantes - {{ accidentes.guantes }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
