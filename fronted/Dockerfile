@@ -1,10 +1,11 @@
+# Paso 1: Preparar la aplicación
 FROM node:18 AS build
 
 # Definir el directorio de trabajo
 WORKDIR /app
 
-# Clonar el repositorio desde GitHub
-RUN git clone https://github.com/Josselynlobos/epp.git .
+# Copiar los archivos del proyecto (asegúrate de que tu código ya esté en el directorio local)
+COPY . /app
 
 # Instalar Angular CLI globalmente
 RUN npm install -g @angular/cli
@@ -24,3 +25,4 @@ EXPOSE 4200
 
 # Comando para iniciar la aplicación en modo desarrollo
 CMD ["npm", "start", "--", "--host", "0.0.0.0", "--disable-host-check"]
+
