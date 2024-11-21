@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // Configuración de la conexión a la base de datos MySQL
 const db = mysql.createConnection({
-  host: 'mysql',     // Cambia esto si tu MySQL está en otro host
+  host: 'localhost',     // Cambia esto si tu MySQL está en otro host
   user: 'root',          // Tu usuario de MySQL
   password: '123456',    // Tu contraseña de MySQL
   database: 'epp'        // El nombre de tu base de datos
